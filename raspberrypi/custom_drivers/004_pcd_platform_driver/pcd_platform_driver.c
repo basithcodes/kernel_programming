@@ -26,7 +26,7 @@ ssize_t pcd_read(struct file *filp, char __user *buff, size_t count, loff_t *f_p
 }
 
 ssize_t pcd_write(struct file *filp, const char __user *buff, size_t count, loff_t *f_pos) {
-	return 0;
+	return -ENOMEM;
 }
 
 loff_t pcd_lseek(struct file *filp, loff_t offset, int whence) {
