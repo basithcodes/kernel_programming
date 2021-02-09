@@ -1,0 +1,10 @@
+[27519.072575] pcd_read :Updated file position = 512
+[27519.072610] pcd_release :Release was successfull
+[27547.270418] pcd_open :Open was successfull
+[27547.304906] pcd_write :Write requested for 552 bytes 
+[27547.304928] pcd_write :Current file position = 0
+[27547.304932] pcd_write :Number of bytes successfully written = 512
+[27547.304934] pcd_write :Updated file position = 512
+[27547.304939] pcd_write :Write requested for 40 bytes 
+[27547.304941] pcd_write :Current file position = 512
+[27547.305892] pcd_release :Release was successfull

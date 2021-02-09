@@ -1,0 +1,1 @@
+cmd_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver/pcd.mod := { echo  /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver/pcd.o;  echo; } > /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/002pseudo_char_driver/pcd.mod
