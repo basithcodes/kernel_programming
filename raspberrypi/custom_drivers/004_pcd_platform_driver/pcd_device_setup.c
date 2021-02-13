@@ -15,7 +15,7 @@ struct pcdev_platform_data pcdev_pdata[2] = {
 	[1] = {.size = 1024, .perm = RDWR, .serial_number = "PCDEVABC2"},
 };
 
-/* 1. Create 2 platform devices */
+/* Create 2 platform devices */
 struct platform_device platform_pcdev_1 = {
 	.name = "pseudo-char-device",
 	.id = 0,

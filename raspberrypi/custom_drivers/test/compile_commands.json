@@ -2,7 +2,7 @@
   {
     "arguments": [
       "/usr/bin/gcc",
-      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/.pcd_multi.o.d",
+      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/.test.o.d",
       "-nostdinc",
       "-isystem",
       "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include",
@@ -47,6 +47,7 @@
       "-mtune=generic",
       "-mno-red-zone",
       "-mcmodel=kernel",
+      "-fcf-protection=none",
       "-Wno-sign-compare",
       "-fno-asynchronous-unwind-tables",
       "-mindirect-branch=thunk-extern",
@@ -85,27 +86,26 @@
       "-Werror=date-time",
       "-Werror=incompatible-pointer-types",
       "-Werror=designated-init",
-      "-fcf-protection=none",
       "-Wno-packed-not-aligned",
       "-fplugin=./scripts/gcc-plugins/structleak_plugin.so",
       "-fplugin-arg-structleak_plugin-byref-all",
       "-DSTRUCTLEAK_PLUGIN",
       "-DMODULE",
-      "-DKBUILD_BASENAME=\"pcd_multi\"",
-      "-DKBUILD_MODNAME=\"pcd_multi\"",
+      "-DKBUILD_BASENAME=\"test\"",
+      "-DKBUILD_MODNAME=\"test\"",
       "-c",
       "-o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.c"
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.o",
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.c"
     ],
-    "directory": "/usr/lib/modules/5.10.13-arch1-2/build",
-    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.c",
-    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.o"
+    "directory": "/usr/lib/modules/5.10.15-arch1-1/build",
+    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.c",
+    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.o"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
-      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/.pcd_multi.mod.o.d",
+      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/.test.mod.o.d",
       "-nostdinc",
       "-isystem",
       "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include",
@@ -150,6 +150,7 @@
       "-mtune=generic",
       "-mno-red-zone",
       "-mcmodel=kernel",
+      "-fcf-protection=none",
       "-Wno-sign-compare",
       "-fno-asynchronous-unwind-tables",
       "-mindirect-branch=thunk-extern",
@@ -188,21 +189,20 @@
       "-Werror=date-time",
       "-Werror=incompatible-pointer-types",
       "-Werror=designated-init",
-      "-fcf-protection=none",
       "-Wno-packed-not-aligned",
       "-fplugin=./scripts/gcc-plugins/structleak_plugin.so",
       "-fplugin-arg-structleak_plugin-byref-all",
       "-DSTRUCTLEAK_PLUGIN",
       "-DMODULE",
-      "-DKBUILD_BASENAME=\"pcd_multi.mod\"",
-      "-DKBUILD_MODNAME=\"pcd_multi\"",
+      "-DKBUILD_BASENAME=\"test.mod\"",
+      "-DKBUILD_MODNAME=\"test\"",
       "-c",
       "-o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.mod.o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.mod.c"
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod.o",
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod.c"
     ],
-    "directory": "/usr/lib/modules/5.10.13-arch1-2/build",
-    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.mod.c",
-    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.mod.o"
+    "directory": "/usr/lib/modules/5.10.15-arch1-1/build",
+    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod.c",
+    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod.o"
   }
 ]

@@ -16,7 +16,6 @@ int check_permission(int device_permission, int device_access_mode) {
 	return -EPERM;
 }
 
-
 int pcd_open(struct inode *inode, struct file *filp) {
 	return 0;
 }

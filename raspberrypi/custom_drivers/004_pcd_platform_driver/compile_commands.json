@@ -2,7 +2,7 @@
   {
     "arguments": [
       "/usr/bin/gcc",
-      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/.pcd_multi.o.d",
+      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/.pcd_device_setup.o.d",
       "-nostdinc",
       "-isystem",
       "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include",
@@ -91,21 +91,21 @@
       "-fplugin-arg-structleak_plugin-byref-all",
       "-DSTRUCTLEAK_PLUGIN",
       "-DMODULE",
-      "-DKBUILD_BASENAME=\"pcd_multi\"",
-      "-DKBUILD_MODNAME=\"pcd_multi\"",
+      "-DKBUILD_BASENAME=\"pcd_device_setup\"",
+      "-DKBUILD_MODNAME=\"pcd_device_setup\"",
       "-c",
       "-o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.c"
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.o",
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.c"
     ],
     "directory": "/usr/lib/modules/5.10.15-arch1-1/build",
-    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.c",
-    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.o"
+    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.c",
+    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.o"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
-      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/.pcd_multi.mod.o.d",
+      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/.pcd_device_setup.mod.o.d",
       "-nostdinc",
       "-isystem",
       "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include",
@@ -194,15 +194,15 @@
       "-fplugin-arg-structleak_plugin-byref-all",
       "-DSTRUCTLEAK_PLUGIN",
       "-DMODULE",
-      "-DKBUILD_BASENAME=\"pcd_multi.mod\"",
-      "-DKBUILD_MODNAME=\"pcd_multi\"",
+      "-DKBUILD_BASENAME=\"pcd_device_setup.mod\"",
+      "-DKBUILD_MODNAME=\"pcd_device_setup\"",
       "-c",
       "-o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.mod.o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.mod.c"
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.o",
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.c"
     ],
     "directory": "/usr/lib/modules/5.10.15-arch1-1/build",
-    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.mod.c",
-    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/003pseudo_char_driver_multiple_devices/pcd_multi.mod.o"
+    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.c",
+    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.o"
   }
 ]

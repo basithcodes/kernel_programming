@@ -1,8 +1,8 @@
-#include <linux/cdev.h>
 #include <linux/device.h>
 #include <linux/fs.h>
 #include <linux/kdev_t.h>
 #include <linux/module.h>
+#include <linux/cdev.h>
 
 #define MEM_SIZE_MAX_PCDEV1 1024
 #define MEM_SIZE_MAX_PCDEV2 512

@@ -1,0 +1,1 @@
+cmd_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/modules.order := {   echo /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.ko; :; } | awk '!x[$$0]++' - > /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/modules.order
