@@ -1,4 +1,4 @@
-cmd_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.o := gcc -Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/.pcd_device_setup.mod.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -fmacro-prefix-map=./= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -fcf-protection=none -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=2048 -fstack-protector-strong -Wno-unused-but-set-variable -Wimplicit-fallthrough -Wno-unused-const-variable -g -gdwarf-4 -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned -fplugin=./scripts/gcc-plugins/structleak_plugin.so -fplugin-arg-structleak_plugin-byref-all -DSTRUCTLEAK_PLUGIN  -DMODULE  -DKBUILD_BASENAME='"pcd_device_setup.mod"' -DKBUILD_MODNAME='"pcd_device_setup"' -c -o /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.o /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.c
+cmd_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.o := gcc -Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/.pcd_device_setup.mod.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -fmacro-prefix-map=./= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=2048 -fstack-protector-strong -Wno-unused-but-set-variable -Wimplicit-fallthrough -Wno-unused-const-variable -g -gdwarf-4 -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned -fplugin=./scripts/gcc-plugins/structleak_plugin.so -fplugin-arg-structleak_plugin-byref-all -DSTRUCTLEAK_PLUGIN  -DMODULE  -DKBUILD_BASENAME='"pcd_device_setup.mod"' -DKBUILD_MODNAME='"pcd_device_setup"' -c -o /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.o /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.c
 
 source_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.o := /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_platform_driver/pcd_device_setup.mod.c
 
@@ -12,7 +12,6 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/foo.h) \
   include/linux/compiler_types.h \
     $(wildcard include/config/have/arch/compiler/h.h) \
-    $(wildcard include/config/enable/must/check.h) \
     $(wildcard include/config/cc/has/asm/inline.h) \
   include/linux/compiler_attributes.h \
   include/linux/compiler-gcc.h \
@@ -31,6 +30,7 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/tracepoints.h) \
     $(wildcard include/config/tree/srcu.h) \
     $(wildcard include/config/bpf/events.h) \
+    $(wildcard include/config/debug/info/btf/modules.h) \
     $(wildcard include/config/jump/label.h) \
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/event/tracing.h) \
@@ -65,14 +65,12 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   include/uapi/asm-generic/posix_types.h \
   include/linux/poison.h \
     $(wildcard include/config/illegal/pointer/value.h) \
-    $(wildcard include/config/page/poisoning/zero.h) \
   include/linux/const.h \
   include/vdso/const.h \
   include/uapi/linux/const.h \
   include/linux/kernel.h \
     $(wildcard include/config/preempt/voluntary.h) \
     $(wildcard include/config/debug/atomic/sleep.h) \
-    $(wildcard include/config/preempt/rt.h) \
     $(wildcard include/config/mmu.h) \
     $(wildcard include/config/prove/locking.h) \
     $(wildcard include/config/panic/timeout.h) \
@@ -94,7 +92,8 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   arch/x86/include/generated/asm/rwonce.h \
   include/asm-generic/rwonce.h \
   include/linux/kasan-checks.h \
-    $(wildcard include/config/kasan.h) \
+    $(wildcard include/config/kasan/generic.h) \
+    $(wildcard include/config/kasan/sw/tags.h) \
   include/linux/kcsan-checks.h \
     $(wildcard include/config/kcsan.h) \
     $(wildcard include/config/kcsan/ignore/atomics.h) \
@@ -105,6 +104,8 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   include/linux/bits.h \
   include/vdso/bits.h \
   include/linux/build_bug.h \
+  include/uapi/linux/kernel.h \
+  include/uapi/linux/sysinfo.h \
   arch/x86/include/asm/bitops.h \
     $(wildcard include/config/x86/cmov.h) \
   arch/x86/include/asm/alternative.h \
@@ -136,6 +137,7 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/x86/5level.h) \
     $(wildcard include/config/page/table/isolation.h) \
     $(wildcard include/config/iommu/support.h) \
+    $(wildcard include/config/x86/sgx.h) \
   include/asm-generic/bitops/const_hweight.h \
   include/asm-generic/bitops/instrumented-atomic.h \
   include/linux/instrumented.h \
@@ -154,6 +156,9 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   include/linux/log2.h \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
     $(wildcard include/config/arch/has/ilog2/u64.h) \
+  include/linux/math.h \
+  arch/x86/include/asm/div64.h \
+  include/asm-generic/div64.h \
   include/linux/minmax.h \
   include/linux/typecheck.h \
   include/linux/printk.h \
@@ -171,8 +176,6 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   include/linux/kern_levels.h \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
-  include/uapi/linux/kernel.h \
-  include/uapi/linux/sysinfo.h \
   arch/x86/include/asm/cache.h \
     $(wildcard include/config/x86/l1/cache/shift.h) \
     $(wildcard include/config/x86/internode/cache/shift.h) \
@@ -200,13 +203,10 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   include/linux/jump_label.h \
     $(wildcard include/config/have/arch/jump/label/relative.h) \
   arch/x86/include/asm/jump_label.h \
-  arch/x86/include/asm/div64.h \
-  include/asm-generic/div64.h \
   include/linux/stat.h \
   arch/x86/include/uapi/asm/stat.h \
   include/uapi/linux/stat.h \
   include/linux/time.h \
-    $(wildcard include/config/arch/uses/gettimeoffset.h) \
     $(wildcard include/config/posix/timers.h) \
   include/linux/math64.h \
     $(wildcard include/config/arch/supports/int128.h) \
@@ -260,6 +260,7 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/physical/align.h) \
     $(wildcard include/config/dynamic/physical/mask.h) \
   arch/x86/include/asm/page_64_types.h \
+    $(wildcard include/config/kasan.h) \
     $(wildcard include/config/dynamic/memory/layout.h) \
     $(wildcard include/config/randomize/base.h) \
   arch/x86/include/asm/kaslr.h \
@@ -270,14 +271,12 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/pgtable/levels.h) \
     $(wildcard include/config/paravirt/debug.h) \
   arch/x86/include/asm/desc_defs.h \
-  arch/x86/include/asm/kmap_types.h \
-    $(wildcard include/config/debug/highmem.h) \
-  include/asm-generic/kmap_types.h \
   arch/x86/include/asm/pgtable_types.h \
     $(wildcard include/config/mem/soft/dirty.h) \
     $(wildcard include/config/have/arch/userfaultfd/wp.h) \
     $(wildcard include/config/proc/fs.h) \
   arch/x86/include/asm/pgtable_64_types.h \
+    $(wildcard include/config/debug/kmap/local/force/map.h) \
   arch/x86/include/asm/sparsemem.h \
     $(wildcard include/config/sparsemem.h) \
     $(wildcard include/config/numa/keep/meminfo.h) \
@@ -324,6 +323,8 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
     $(wildcard include/config/fortify/source.h) \
+  include/linux/errno.h \
+  include/uapi/linux/errno.h \
   include/uapi/linux/string.h \
   arch/x86/include/asm/string.h \
   arch/x86/include/asm/string_64.h \
@@ -407,7 +408,6 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/memory/hotremove.h) \
     $(wildcard include/config/have/arch/pfn/valid.h) \
     $(wildcard include/config/holes/in/zone.h) \
-    $(wildcard include/config/arch/has/holes/memorymodel.h) \
   include/linux/spinlock.h \
     $(wildcard include/config/preemption.h) \
   include/linux/preempt.h \
@@ -417,6 +417,7 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   arch/x86/include/asm/preempt.h \
   include/linux/thread_info.h \
     $(wildcard include/config/thread/info/in/task.h) \
+    $(wildcard include/config/generic/entry.h) \
     $(wildcard include/config/have/arch/within/stack/frames.h) \
     $(wildcard include/config/hardened/usercopy.h) \
   include/linux/restart_block.h \
@@ -428,8 +429,6 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/debug/locking/api/selftests.h) \
   include/linux/smp.h \
     $(wildcard include/config/up/late/init.h) \
-  include/linux/errno.h \
-  include/uapi/linux/errno.h \
   include/linux/smp_types.h \
   include/linux/llist.h \
     $(wildcard include/config/arch/have/nmi/safe/cmpxchg.h) \
@@ -482,6 +481,7 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   include/linux/numa.h \
     $(wildcard include/config/nodes/shift.h) \
   include/linux/seqlock.h \
+    $(wildcard include/config/preempt/rt.h) \
   include/linux/mutex.h \
     $(wildcard include/config/mutex/spin/on/owner.h) \
     $(wildcard include/config/debug/mutexes.h) \
@@ -495,7 +495,7 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/linux/page-flags-layout.h \
     $(wildcard include/config/numa/balancing.h) \
-    $(wildcard include/config/kasan/sw/tags.h) \
+    $(wildcard include/config/kasan/hw/tags.h) \
   include/generated/bounds.h \
   include/linux/mm_types.h \
     $(wildcard include/config/have/aligned/struct/page.h) \
@@ -555,7 +555,7 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
   include/generated/timeconst.h \
   include/vdso/ktime.h \
   include/linux/timekeeping.h \
-  include/linux/timekeeping32.h \
+    $(wildcard include/config/generic/cmos/update.h) \
   include/linux/debugobjects.h \
     $(wildcard include/config/debug/objects.h) \
     $(wildcard include/config/debug/objects/free.h) \
@@ -588,6 +588,7 @@ deps_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/004_pcd_p
     $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
   arch/x86/include/asm/topology.h \
     $(wildcard include/config/sched/mc/prio.h) \
+    $(wildcard include/config/acpi/cppc/lib.h) \
   arch/x86/include/asm/mpspec.h \
     $(wildcard include/config/eisa.h) \
     $(wildcard include/config/x86/mpparse.h) \

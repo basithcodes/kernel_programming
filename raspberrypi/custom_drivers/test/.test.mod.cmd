@@ -1,1 +1,0 @@
-cmd_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod := { echo  /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.o;  echo; } > /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod

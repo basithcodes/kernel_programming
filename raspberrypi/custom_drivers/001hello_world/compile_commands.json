@@ -2,7 +2,7 @@
   {
     "arguments": [
       "/usr/bin/gcc",
-      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/.test.o.d",
+      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/.main.o.d",
       "-nostdinc",
       "-isystem",
       "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include",
@@ -91,21 +91,21 @@
       "-fplugin-arg-structleak_plugin-byref-all",
       "-DSTRUCTLEAK_PLUGIN",
       "-DMODULE",
-      "-DKBUILD_BASENAME=\"test\"",
-      "-DKBUILD_MODNAME=\"test\"",
+      "-DKBUILD_BASENAME=\"main\"",
+      "-DKBUILD_MODNAME=\"main\"",
       "-c",
       "-o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.c"
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.o",
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.c"
     ],
     "directory": "/usr/lib/modules/5.10.15-arch1-1/build",
-    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.c",
-    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.o"
+    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.c",
+    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.o"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
-      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/.test.mod.o.d",
+      "-Wp,-MMD,/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/.main.mod.o.d",
       "-nostdinc",
       "-isystem",
       "/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include",
@@ -194,15 +194,15 @@
       "-fplugin-arg-structleak_plugin-byref-all",
       "-DSTRUCTLEAK_PLUGIN",
       "-DMODULE",
-      "-DKBUILD_BASENAME=\"test.mod\"",
-      "-DKBUILD_MODNAME=\"test\"",
+      "-DKBUILD_BASENAME=\"main.mod\"",
+      "-DKBUILD_MODNAME=\"main\"",
       "-c",
       "-o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod.o",
-      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod.c"
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.mod.o",
+      "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.mod.c"
     ],
     "directory": "/usr/lib/modules/5.10.15-arch1-1/build",
-    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod.c",
-    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/test.mod.o"
+    "file": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.mod.c",
+    "output": "/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.mod.o"
   }
 ]
