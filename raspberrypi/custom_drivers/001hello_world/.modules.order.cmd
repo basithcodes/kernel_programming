@@ -1,1 +1,0 @@
-cmd_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/modules.order := {   echo /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/main.ko; :; } | awk '!x[$$0]++' - > /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/001hello_world/modules.order
