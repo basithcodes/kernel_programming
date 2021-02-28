@@ -199,12 +199,13 @@ static int __init pcd_driver_init(void) {
 	int ret;
 	int i = 0;
 
-	/* 1. Dynamically allocate a device number */
+	/* Dynamically allocate a device number */
 	ret = alloc_chrdev_region(&pcdrv_data.device_number, 0, NO_OF_DEVICES, "pcd_devices");
 	if (ret < 0) {
 		pr_err("Allocating device number for character device failed\n");
 		goto out;
 	}
+
 	/* Create device class under /sys/class */
 	pcdrv_data.class_pcd = class_create(THIS_MODULE, "pcd_class");
 	if (IS_ERR(pcdrv_data.class_pcd)) {
@@ -243,12 +244,12 @@ static int __init pcd_driver_init(void) {
 	return 0;
 
 
-cdev_del:
-	for (; i < NO_OF_DEVICES; i--)
-		cdev_del(&pcdrv_data.pcdev_data[i].cdev);
-
 class_destroy:
 	class_destroy(pcdrv_data.class_pcd);
+
+cdev_del:
+	for (; i >= 0; i--)
+		cdev_del(&pcdrv_data.pcdev_data[i].cdev);
 
 unreg_chrdev:
 	unregister_chrdev_region(pcdrv_data.device_number, NO_OF_DEVICES);
