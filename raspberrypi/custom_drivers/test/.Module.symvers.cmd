@@ -1,0 +1,1 @@
+cmd_/home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/Module.symvers := sed 's/ko$$/o/' /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/modules.order | scripts/mod/modpost  -a   -o /home/basith/Coding/kernel_programming/raspberrypi/custom_drivers/test/Module.symvers -e -i Module.symvers  -N -T -
