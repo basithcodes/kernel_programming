@@ -75,15 +75,43 @@ struct driver_private_data driver_data = {
 		}
 	},
 };
+int check_permission(void) {
+	return 0;
+}
 
 /* Create the open method */
 int multi_open(struct inode *inode, struct file *filp) {
+
+	int ret;
+	int minor_number;
+
+	/* Inode contains the information of specific device file and it contains device number as well */
+	minor_number = MINOR(inode->i_rdev); // i_rdev is device number of specific device
 	
-	return 0;
+	pr_info("Device file %d is opened", minor_number);
+
+	/* Driver open method should supply private data to other methods, 
+	 * struct file contains member element *private_data,
+	 * store the device specific data in private data pointer */
+	struct device_private_data *device_data;
+
+	/* container of macro extracts the address of device_private_data structure using member element cdev*/
+	device_data = container_of(inode->i_cdev, struct device_private_data, device_cdev);
+
+	/* Supply the address of device_private_data to struct file member element(private data) */
+	filp->private_data = device_data;
+
+	/* Check the device file permission whether its read only write only etc */
+	ret = check_permission(); // returns zero on success
+
+	(!ret)?(pr_info("Open was successfull\n")):(pr_info("Open was unsuccessfull\n"));
+
+	return ret;
 }
 
 /* Create the read method */
 ssize_t multi_read(struct file *filp, char __user *buff, size_t count, loff_t *f_pos) {
+
 	return count;
 }
 
