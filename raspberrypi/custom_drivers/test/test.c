@@ -7,6 +7,7 @@
 #include <linux/kdev_t.h>
 #include <linux/device.h>
 
+
 #define NO_OF_DEVICES 4
 
 #define DEVICE_ONE_MEM_SIZE 512
@@ -75,8 +76,20 @@ struct driver_private_data driver_data = {
 		}
 	},
 };
-int check_permission(void) {
-	return 0;
+int check_permission(int device_permission, int access_mode) {
+	if (device_permission == RDWR) {
+		return 0;
+	}
+
+	if ((device_permission == RDONLY) && ((access_mode & FMODE_READ) && !(access_mode & FMODE_WRITE))) {
+		return 0;
+	}
+
+	if ((device_permission == WRONLY) && ((access_mode & FMODE_WRITE) && !(access_mode & FMODE_READ))) {
+		return 0;
+	}
+
+	return -EPERM;
 }
 
 /* Create the open method */
@@ -102,7 +115,7 @@ int multi_open(struct inode *inode, struct file *filp) {
 	filp->private_data = device_data;
 
 	/* Check the device file permission whether its read only write only etc */
-	ret = check_permission(); // returns zero on success
+	ret = check_permission(device_data->permission, filp->f_mode); // returns zero on success
 
 	(!ret)?(pr_info("Open was successfull\n")):(pr_info("Open was unsuccessfull\n"));
 
@@ -112,21 +125,112 @@ int multi_open(struct inode *inode, struct file *filp) {
 /* Create the read method */
 ssize_t multi_read(struct file *filp, char __user *buff, size_t count, loff_t *f_pos) {
 
+	pr_info("Number of bytes requested: %zu\n", count);
+
+	struct device_private_data *device_data = (struct device_private_data *)filp->private_data;
+
+	int max_size = device_data->size;
+
+	if (count > max_size + *f_pos) {
+		count = max_size - *f_pos;
+		pr_info("Count updated value: %zu\n", count);
+	}
+
+	/* Copy the data to the user buffer using copy to user macro */
+	if(copy_to_user(buff, device_data->buffer + (*f_pos), count)) {
+		return -EFAULT;
+	}
+
+	/* Update the file position pointer*/
+	*f_pos += count;
+
+	pr_info("Number of bytes successfully read: %zu\n", count);
+	pr_info("File position: %lld\n", *f_pos);
+
 	return count;
 }
 
 /* Create the write method */
 ssize_t multi_write(struct file *filp, const char __user *buff, size_t count, loff_t *f_pos) {
-	return -ENOMEM;
+	pr_info("Number of requested bytes to be written: %zu", count);
+	pr_info("Current file position = %lld\n", *f_pos);
+
+	struct device_private_data *device_data = (struct device_private_data *)filp->private_data;
+
+	int max_size = device_data->size;
+
+	/* Update the count if it exceeds the maximum memory size */
+	if (count > max_size + (*f_pos)) {
+		count = max_size - (*f_pos);
+	}
+
+	if(!count) {
+		pr_err("No space left on device\n");
+		return -ENOMEM;
+	}
+
+	/* Copy the bytes to the device buffer */
+	if (copy_from_user(device_data->buffer + (*f_pos), buff, count))
+		return -EFAULT;
+
+	/* Update the file position */
+	*f_pos += count;
+
+	/* Print the information and return the value */
+	pr_info("Number of bytes successfully written to device: %zu\n", count);
+	pr_info("Updated file position = %lld\n", *f_pos);
+
+	return count;
 }
 
 /* Create the llseek method */
-loff_t multi_llseek(struct file *filp, loff_t f_pos, int count) {
-	return count;
+loff_t multi_llseek(struct file *filp, loff_t offset, int whence) {
+
+	/* Get the device data from private data (using file pointer)*/
+	struct device_private_data *device_data = (struct device_private_data *)filp->private_data;
+
+	/* Print the information before seeking */
+	pr_info("lseek requested\n");
+	pr_info("Current file position = %lld\n", filp->f_pos);
+
+	int temp;
+
+	int max_size = device_data->size;
+
+	/* Seek the value based on whence value */
+	switch (whence) {
+		case SEEK_SET:
+			temp = max_size;
+			if (offset > temp || offset < 0)
+				return -EINVAL;
+			filp->f_pos = offset;
+			break;
+
+		case SEEK_CUR:
+			temp = filp->f_pos + offset;
+			if (temp > max_size || offset < 0)
+				return -EINVAL;
+			filp->f_pos = temp;
+			break;
+
+		case SEEK_END:
+			/* This feature is not applicable in this case and logic is also not properly implemented*/
+			temp = max_size + offset;
+			if (temp > max_size)
+				return -EINVAL;
+			filp->f_pos = temp;
+			break;
+
+		default:
+			return -EINVAL;
+	}
+
+	return temp;
 }
 
 /* Create the release method */
 int multi_release(struct inode *inode, struct file *filp) {
+	pr_info("Release was successfull\n");
 	return 0;
 }
 
@@ -183,8 +287,9 @@ static int __init multiple_device_init(void) {
 			goto class_device_destroy;
 		}
 
-
 	}
+
+	pr_info("Module Insertion is successfull");
 
 cdev_delete:
 class_device_destroy:

@@ -1,4 +1,4 @@
-obj-m := test.o
+obj-m := pcd.o
 ARCH=arm64
 CROSS_COMPILER=aarch64-linux-gnu-
 KERN_DIR=/home/basith/Coding/kernel_programming/raspberrypi/source/linux

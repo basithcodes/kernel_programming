@@ -16,5 +16,3 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("ABDUL");
 MODULE_DESCRIPTION("A simple hello world module");
 MODULE_INFO(board, "Raspberrypi");
-
-
